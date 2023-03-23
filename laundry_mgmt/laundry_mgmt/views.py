@@ -150,6 +150,9 @@ def track_order(request):
       if(Order_data):
         return render(request, "tracking.html", {'id': id , 'num_garm': Order_data['num_garm'], 'instructions': Order_data['instructions'], 'pick_date': Order_data['pick_date'], 'delivery_date': Order_data['delivery_date'], 'price': Order_data['price'], 'user': Order_data['user'],
         'curr_user' : user})
+      else:
+        print("Order ID does not exist!")
+        return render(request, "tracking.html", {'curr_user' : user})
     else:
       return render(request, "tracking.html", {'curr_user' : user})
   else:
