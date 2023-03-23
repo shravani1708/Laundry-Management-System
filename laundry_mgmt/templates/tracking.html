@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color:white;
+  font-family:'Montserrat', sans-serif;
+  color: black;
+}
+body{
+     background-color:#0b3754;
+      background-size: 100%;
+      background-position: center top;
+      font-family: 'Montserrat', sans-serif;
+}
+div {    
+  font-size:30px;
+  font-family:'Montserrat', sans-serif;
+  padding: 30px;
+  text-align: center;
+}
+h2{
+color:white;
+font-family:'Montserrat', sans-serif;
+}
+.forms
+{
+color:white;
+font-family:'Montserrat', sans-serif;
+}
+</style>
+<body>
+<nav class="w3-bar w3-border w3-white w3-xlarge">
+  {% if curr_user %}
+    <a href="/home" class="w3-button w3-bar-item w3-border">Home</a> <!--Homepage -->
+  {% else %}
+     <a href="/" class="w3-button w3-bar-item w3-border">Home</a> <!--Index -->
+  {% endif %}
+      </nav>
+<div class='forms'>
+<form method="POST">
+  {% csrf_token %}
+  <label for="TID">Enter Tracking ID:</label><br>
+  <input id="TID" type="text" name="TID"  placeholder="Enter ID Here"/> 
+  <input type="submit" hidden />
+</form>
+</div>
+{% if id %}
+  <div class="details">
+    <h2> Order ID: {{ id }}</h2>
+    <h2> Order Placed By: {{ user }}</h2>
+    <h2> No of Garments: {{ num_garm }}</h2>
+    <h2> Total Price: {{ price }}</h2>
+    <h2> Instructions: {{ instructions }}</h2>
+    <h2> Pick-Up Date: {{ pick_date }}</h2>
+    <h2> Delivery Date: {{ delivery_date }}</h2>
+  </div>
+{% endif %}
+</body>
+</html>

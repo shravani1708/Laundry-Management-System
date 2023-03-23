@@ -107,6 +107,8 @@ celerybeat.pid
 env/
 venv/
 ENV/
+templates-old/
+test-files/
 env.bak/
 venv.bak/
 
