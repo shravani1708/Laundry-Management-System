@@ -1,17 +1,19 @@
-The Laundry Management System is a web application developed using Django, HTML, CSS, and Firebase. It is designed to help laundry businesses manage their operations efficiently, providing features for managing customer orders, tracking inventory, and generating reports.
+# Laundry Management System<br/>
 
-Features
-User Authentication
--secure login and registration functionality for laundry staff and customers.
+The Laundry Management System is a web application developed using Django, HTML, CSS, and Firebase. It is designed to help laundry businesses manage their operations efficiently, providing features for managing customer orders, tracking inventory, and generating reports.<br/>
+
+# Features <br/>
+**User Authentication**<br/>
+-secure login and registration functionality for laundry staff and customers.<br/>
  
-Customer Dashboard
- -Customers can place laundry orders, and view previous order history.
+**Customer Dashboard**<br/>
+ -Customers can place laundry orders, and view previous order history.<br/>
  
-Staff Dashboard
--Staff members can manage incoming orders, update the status of orders, and view order details.
+**Staff Dashboard**<br/>
+-Staff members can manage incoming orders, update the status of orders, and view order details.<br/>
 
-Order Tracking
--Allows customers to track their orders using the order ID and automatic notifications to customers about the status of their orders via email or SMS.
+**Order Tracking**<br/>
+-Allows customers to track their orders using the order ID and automatic notifications to customers about the status of their orders via email or SMS.<br/>
 
-Reports Generation
--Generate reports on order statistics and revenue
+**Reports Generation**<br/>
+-Generate reports on order statistics and revenue<br/>
